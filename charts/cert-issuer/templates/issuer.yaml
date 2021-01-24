@@ -1,5 +1,4 @@
 {{- $fullName := include "cert-issuer.fullname" . -}}
-{{- $domains := .Values.domains | required ".Values.domains must be an array of domain names" }}
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
@@ -12,8 +11,7 @@ spec:
 {{ .Values.acme | toYaml | indent 4 }}
 {{- end }}
     solvers:
-    - selector:
-        dnsZones: {{ $domains | toYaml | nindent 8 }}
+    - selector: {}
       dns01:
         route53:
           region: {{ .Values.aws.region }}

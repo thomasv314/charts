@@ -1,0 +1,14 @@
+{{- $fullName := include "cert-issuer.fullname" . -}}
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: tls
+  labels:
+    {{- include "cert-issuer.labels" . | nindent 4 }}
+  spec:
+    secretName: tls
+    dnsNames:
+    - "*.dev.thomasbuilds.technology"
+    issuerRef:
+      name: {{ $fullName }}
+      kind: ClusterIssuer
