@@ -2,5 +2,5 @@ apiVersion: v2
 name: certificates
 description: Installs a route53 letsencrypt cert-issuer, provisions TLS certs
 type: application
-version: 0.0.3
+version: 0.0.4
 appVersion: "1.0.0"

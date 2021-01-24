@@ -10,11 +10,12 @@ metadata:
   labels:
     {{- include "cert-issuer.labels" $top | nindent 4 }}
     cert: {{ $cert.name }}
-  spec:
-    secretName: {{ $cert.name }}
-    dnsNames:
-{{ $domains | toYaml | indent 4 }}
-    issuerRef:
-      name: {{ $fullName }}
-      kind: ClusterIssuer
+spec:
+  secretName: {{ $cert.name }}
+  dnsNames:
+{{ $domains | toYaml | indent 2 }}
+  issuerRef:
+    name: {{ $fullName }}
+    kind: ClusterIssuer
+---
 {{ end }}
