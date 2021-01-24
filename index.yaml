@@ -64,6 +64,16 @@ entries:
   certificates:
   - apiVersion: v2
     appVersion: 1.0.0
+    created: "2021-01-24T07:14:11.656231988Z"
+    description: Installs a route53 letsencrypt cert-issuer, provisions TLS certs
+    digest: 55281ae1b5814566661e233fecde79e078ee06e62c75ad1132829dc2b0a4fc5b
+    name: certificates
+    type: application
+    urls:
+    - https://github.com/thomasv314/charts/releases/download/certificates-0.0.4/certificates-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
+    appVersion: 1.0.0
     created: "2021-01-24T07:01:51.319176275Z"
     description: Installs a route53 letsencrypt cert-issuer, provisions TLS certs
     digest: 2125b13a38fc5a4b63cb6025188575e051bb7ee45581fdd188fded49e8b7c04b
