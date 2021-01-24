@@ -61,4 +61,15 @@ entries:
     urls:
     - https://github.com/thomasv314/charts/releases/download/cert-issuer-0.0.3/cert-issuer-0.0.3.tgz
     version: 0.0.3
+  certificates:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2021-01-24T07:01:51.319176275Z"
+    description: Installs a route53 letsencrypt cert-issuer, provisions TLS certs
+    digest: 2125b13a38fc5a4b63cb6025188575e051bb7ee45581fdd188fded49e8b7c04b
+    name: certificates
+    type: application
+    urls:
+    - https://github.com/thomasv314/charts/releases/download/certificates-0.0.3/certificates-0.0.3.tgz
+    version: 0.0.3
 generated: "2021-01-24T04:17:38.996341026Z"
