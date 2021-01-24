@@ -82,4 +82,15 @@ entries:
     urls:
     - https://github.com/thomasv314/charts/releases/download/certificates-0.0.3/certificates-0.0.3.tgz
     version: 0.0.3
+  simple-service:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-01-24T19:58:30.042119805Z"
+    description: A Helm chart for Kubernetes
+    digest: 5e31da816acfbccdd3f4668aa7dcadc810df8495bc33b05959bf871ff8905199
+    name: simple-service
+    type: application
+    urls:
+    - https://github.com/thomasv314/charts/releases/download/simple-service-0.1.0/simple-service-0.1.0.tgz
+    version: 0.1.0
 generated: "2021-01-24T04:17:38.996341026Z"
