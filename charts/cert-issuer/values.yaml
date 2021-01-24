@@ -4,5 +4,5 @@
 
 aws:
   region: us-east-2
-  access_key_id:
-  secret_access_key:
+  access_key_id: set-me
+  secret_access_key: set-me
