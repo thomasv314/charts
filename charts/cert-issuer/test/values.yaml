@@ -1,0 +1,9 @@
+acme:
+  email: user@example.com
+  server: https://acme-staging-v02.api.letsencrypt.org/directory
+domains:
+  - thomas.com
+aws:
+  region: us-east-2
+  access_key_id: set-me
+  secret_access_key: set-me

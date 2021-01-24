@@ -8,6 +8,9 @@ metadata:
     {{- include "cert-issuer.labels" . | nindent 4 }}
 spec:
   acme:
+{{- if .Values.acme }}
+{{ .Values.acme | toYaml | indent 4 }}
+{{- end }}
     solvers:
     - selector:
         dnsZones: {{ $domains | toYaml | nindent 8 }}
@@ -18,3 +21,4 @@ spec:
           secretAccessKeySecretRef:
             name: {{ $fullName }}-dns
             key: secret-access-key
+
