@@ -1,0 +1,20 @@
+{{- $fullName := include "cert-issuer.fullname" . -}}
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: {{ $fullName }}
+  labels:
+    {{- include "cert-issuer.labels" . | nindent 4 }}
+spec:
+  acme:
+    solvers:
+    - selector:
+        dnsZones:
+          - "dev.thomasbuilds.technology"
+      dns01:
+        route53:
+          region: {{ .Values.aws.region }}
+          accessKeyID: {{ .Values.aws.access_key_id }}
+          secretAccessKeySecretRef:
+            name: {{ $fullName }}-dns
+            key: secret-access-key
