@@ -3,6 +3,16 @@ entries:
   cert-issuer:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2021-01-24T04:31:38.603080552Z"
+    description: A Helm chart for Kubernetes
+    digest: a8ab9cbbf44b0417b020b88f60ef99baee9369173a241f113ed29e503f4041a0
+    name: cert-issuer
+    type: application
+    urls:
+    - https://github.com/thomasv314/charts/releases/download/cert-issuer-0.0.4/cert-issuer-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2021-01-24T04:17:39.212860087Z"
     description: A Helm chart for Kubernetes
     digest: f64d4634b97a76c77c0dbeaa245365fc691652dbe8439ca48e7e380856c1ca58
