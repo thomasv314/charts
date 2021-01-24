@@ -1,0 +1,19 @@
+{{- $fullName := include "cert-issuer.fullname" . -}}
+{{ $top := . }}
+{{ range $cert := .Values.certificates }}
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: {{ $cert.name }}
+  namespace: {{ $cert.namespace }}
+  labels:
+    {{- include "cert-issuer.labels" $top | nindent 4 }}
+    cert: {{ $cert.name }}
+  spec:
+    secretName: {{ $cert.name }}
+    dnsNames:
+{{ ($cert.domains | required ".Values.certificates[] has a missing array 'domains'") | toYaml | indent 4 }}
+    issuerRef:
+      name: {{ $fullName }}
+      kind: ClusterIssuer
+{{ end }}
